@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "tahoewebshop-services",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A work in progress",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Riley Bathurst <riley@rileybathurst.com>",
   "dependencies": {
+    "@auth0/auth0-react": "^1.10.1",
     "gatsby": "^4.13.0",
     "gatsby-plugin-gatsby-cloud": "^4.13.0",
     "gatsby-plugin-image": "^2.13.0",

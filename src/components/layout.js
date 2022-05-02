@@ -9,8 +9,12 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { Auth0Provider } from "@auth0/auth0-react";
+
 import Header from "./header"
 import "./layout.css"
+
+import NavBar from "./nav-bar"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +29,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    <Auth0Provider
+    domain="dev-kx4yi7g9.us.auth0.com"
+    clientId="TF4k5yOESJ115sOnw3Vhm3sLGdcn5li9"
+    redirectUri={window.location.origin}
+  >
+    <NavBar />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -45,6 +55,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
+      </Auth0Provider>
     </>
   )
 }
