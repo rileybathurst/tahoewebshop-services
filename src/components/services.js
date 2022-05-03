@@ -17,7 +17,7 @@ const Services = () => (
     <h2>Your Servives</h2>
     <ul>
       <li>Domain: {getUser().domain} <DotCom domain={getUser().domain} /></li>
-    <li>Hosting: {getUser().hosting}</li>
+      <li>Hosting: {getUser().hosting}</li>
     </ul>
   </>
 )

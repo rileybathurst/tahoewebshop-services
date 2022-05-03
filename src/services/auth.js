@@ -9,10 +9,11 @@ export const handleLogin = ({ username, password }) => {
   if (username === `riley` && password === `pass`) {
     return setUser({
       username: `riley`,
+      strapi: `0`,
       name: `Riley`,
       email: `riley@tahoewebshop.com`,
       domain: `tahoewebshop.com`,
-      hosting: `basic`
+      hosting: `basic`,
     })
   }
   return false
