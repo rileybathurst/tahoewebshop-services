@@ -4,6 +4,9 @@
   "description": "A work in progress",
   "version": "0.1.0",
   "author": "Riley Bathurst <riley@rileybathurst.com>",
+  "homepage": "https://tahoewebshop.services",
+  "repository": "github:rileybathurst/tahoewebshop-services",
+  "license": "MIT",
   "dependencies": {
     "@auth0/auth0-react": "^1.10.1",
     "gatsby": "^4.13.0",
