@@ -14,7 +14,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-import NavBar from "./nav-bar"
+// import NavBar from "./nav-bar"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,12 +29,12 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    {/* <Auth0Provider
+      {/* <Auth0Provider
     domain="dev-kx4yi7g9.us.auth0.com"
     clientId="TF4k5yOESJ115sOnw3Vhm3sLGdcn5li9"
     redirectUri={window.location.origin}
   > */}
-    <NavBar />
+      {/* <NavBar /> */}
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{

@@ -7,6 +7,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
+import LoginButton from "../components/LoginButton";
+
 // import { Auth0Provider } from "@auth0/auth0-react";
 
 const links = [
@@ -75,21 +77,24 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    
+
+    <LoginButton />
+    <Link to="/account">Account</Link>
+
     <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
-      <p>
-        {isLoggedIn() ? (
-          <>
-            You are logged in, so check your{" "}
-            <Link to="/app/profile">profile</Link>
-          </>
-        ) : (
-          <>
-            You should <Link to="/app/login">log in</Link> to see restricted
-            content
-          </>
-        )}
-      </p>
+    <p>
+      {isLoggedIn() ? (
+        <>
+          You are logged in, so check your{" "}
+          <Link to="/app/profile">profile</Link>
+        </>
+      ) : (
+        <>
+          You should <Link to="/app/login">log in</Link> to see restricted
+          content
+        </>
+      )}
+    </p>
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/example.png"

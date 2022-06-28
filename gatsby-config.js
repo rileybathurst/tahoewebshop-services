@@ -4,7 +4,7 @@ require('dotenv').config({
 
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
-  // accessToken: process.env.STRAPI_TOKEN,
+  accessToken: process.env.STRAPI_TOKEN,
   collectionTypes: [
     'client'
   ],
@@ -14,8 +14,8 @@ const strapiConfig = {
 module.exports = {
   siteMetadata: {
     title: `Tahoe Web Services`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Hey.`,
+    author: `@rileybathurst`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
