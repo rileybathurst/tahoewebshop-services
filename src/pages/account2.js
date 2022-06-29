@@ -17,48 +17,17 @@ function Same(props) {
 
 // create an array of all the emails I have on file
 function Emails(props) {
-  // console.log(props.emails)
-
-  let rack = props.emails;
-
-  // console.log(rack.data);
-  // console.log(rack.data[0]);
-  // console.log(rack.data[0].id);
-
-  // const array1 = ['a', 'b', 'c'];
-  // array1.forEach(element => console.log(element));
-
-  // let rack2 = rack.data[0].map; // map isnt a function
-  let rack2 = rack.data; // map isnt a function
-  // console.log(rack2);
-
-  // rack2.forEach(element => console.log(element));
-  rack2.forEach(element => console.log(element.attributes.email));
-
-  // ok now return this out
-
-  // ok ok now put the emails in an array
   const emails = [];
-  rack2.forEach(element => emails.push(element.attributes.email));
+  props.emails.data.forEach(element => emails.push(element.attributes.email));
 
-  /*  if (emails.includes(props.useremail)) {
- 
-     return <p>me</p>;
-   } */
-
-  return (
-    <>
-      {rack2.map(element => (
-        <div key={element.id}>
-          <p>{element.attributes.email}</p>
-        </div>
-      ))}
-      {emails}
-    </>
-  );
+  if (emails.includes(props.useremail)) {
+    return <p>me</p>;
+  } else {
+    return null;
+  }
 }
 
-const Account = ({ serverData }) => {
+const Account2 = ({ serverData }) => {
   const { user } = useAuth0();
   return (
     <>
@@ -85,7 +54,7 @@ const Account = ({ serverData }) => {
 };
 
 /* 👇 Wrap the component in the withAuthenticationRequired handler 👇 */
-export default withAuthenticationRequired(Account);
+export default withAuthenticationRequired(Account2);
 
 export async function getServerData() {
   try {
